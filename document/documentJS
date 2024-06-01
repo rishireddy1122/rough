@@ -1,0 +1,92 @@
+   // this to aee whether the selecters working on input methods
+
+  const input= document.querySelectorAll("input")
+  confirm.log(input)
+
+  // this is to select the elements of id's
+  const money= document.querySelectorAll("#divId")
+  money.style.color=	'red'   
+
+  // to change color of classes using the javascript in browser
+  const moneys= document.querySelectorAll(".divClass")
+  moneys.forEach(div =>(div.style.color='blue'))
+
+  // we can convert the nodelist into array
+
+   const nodelistArray = Array.from(moneys) // and apply them all array methods
+
+  //  to select the text/name given to the 'div' use '[]' and write text/name .
+  const text = document.querySelectorAll('[someName-givenInDivBlock]')
+
+
+
+
+
+//using eventlistner to check button 
+const btn = document.querySelector('#btnH')function printOnClick(){
+//     console.log("clicked");}
+btn.addEventListener('click',printOnClick)btn.removeEventListener('click',printOnClick)
+
+
+
+
+
+// using the 'change','input','e'."e.target.value"
+// change event fired only if the click happens after giving input .Any where on page
+const input = document.querySelector('#inputId')
+input.addEventListener("change",()=>{    console.log("clicked here");})
+
+
+
+
+
+// using input method
+ const input1 = document.querySelector('#inputId')
+
+ input1.addEventListener("input",()=>{
+     console.log("somthing changed here");
+ })
+
+
+
+
+//this event listner works same as everything . mainly used in operations  
+
+const input1 = document.querySelector('#inputId')
+
+input1.addEventListener("input",(event)=>{
+    console.log(event.target.value==='')
+})
+
+
+
+
+
+// else.preventDefault() is used to prevent the default action , when a button is clicked on form or an link/a is presed to some action 
+const form = document.querySelector("#formID")
+
+form.addEventListener('submit',e=>{
+    e.preventDefault()
+    console.log("clicked");
+})
+
+
+const link = document.querySelector('[google]')
+link.addEventListener("click",e => {   // insted of clicked ,also used "mouseEnter"."mouseLEave","mouseHover","focus","blur","window.resize"
+    e.preventDefault()
+    console.log("somthing clicked here");
+})
+
+
+// resizing the window
+
+window.addEventListener('resize',e=>{
+    console.log("resised")
+})
+
+
+
+
+
+
+next
